@@ -1,0 +1,223 @@
+
+
+/*
+#fileupload:before{
+	display: block;
+	content:'';
+	height:4px;
+	width:100%;
+	position: absolute;
+	top:0;
+	left:0;
+	background:url('img/blue_line.jpg');
+	box-shadow:0 2px 2px rgba(0,0,0,0.4);
+	border-radius:3px 3px 0 0;
+}
+*/
+/*-------------------------
+	Dropbox Element
+--------------------------*/
+
+#fileupload{
+    width: 100%;
+	position: relative;
+	margin:5px auto;
+	height: 100px;
+	overflow: hidden;
+	padding-bottom: 40px;
+	background-color: #fff;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	border: 2px dashed #495969;
+	/*background:url('img/bg.jpg') top left no-repeat #fff;*/
+	background: #fff;
+}
+	
+#fileupload input {
+		position: absolute; top: 0; right: 0;
+		font-size: 250px;
+		opacity: 0;
+		cursor: pointer; /* Won't work in Fx 3.6 */
+}
+	
+iframe {float: right}
+	
+#fileupload_loader {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+    width: 55px;
+	height: 55px; 
+	color: #495969;
+	background:url('img/loader.gif');
+}
+#fileupload_loader i {
+	font-size: 50px;
+	color: #495969;
+	display: none;
+}
+
+#fileupload .message{
+	font-size: 14px;
+	font-weight: bold;
+    text-align: center;
+    padding-top:20px;
+	background: none!important;
+	border:none!important;
+    display: block;
+	color: #444;
+}
+
+#fileupload .message i{
+	color:#ccc;
+	font-size:16px;
+}
+
+
+/*-------------------------
+	Image Previews
+--------------------------*/
+
+#fileupload .preview{
+	width:100px;
+	height: 100px;
+	float:left;
+	margin: 28px 0 0 28px;
+	position: relative;
+	text-align: center;
+}
+
+#fileupload .preview img{
+	max-width: 100px;
+	max-height:100px;
+	border:3px solid #fff;
+	display: block;	
+	box-shadow:0 0 2px #000;
+}
+
+#fileupload .imageHolder{
+	display: inline-block;
+	position:relative;
+}
+
+#fileupload .uploaded{
+	position: absolute;
+	top:0;
+	left:0;
+	height:100%;
+	width:100%;
+	background: url('img/done.png') no-repeat center center rgba(255,255,255,0.5);
+	display: none;
+}
+#fileupload .notuploaded{
+	position: absolute;
+	top:0;
+	left:0;
+	height:100%;
+	width:100%;
+	background: url('img/notdone.png') no-repeat center center rgba(255,255,255,0.5);
+	display: none;
+}
+
+#fileupload .preview.done .uploaded{
+	display: block;
+}
+
+#fileupload .preview.notdone .notuploaded{
+	display: block;
+}
+
+/*-------------------------
+	Progress Bars
+--------------------------*/
+
+#fileupload .progressHolder{
+	position: absolute;
+	background-color:#252f38;
+	height:12px;
+	width:100%;
+	left:0;
+	bottom: 0;
+	box-shadow:0 0 2px #000;
+}
+
+#fileupload .progress{
+	background-color:#96CA2D; /*#2586d0*/
+	position: absolute;
+	height:100%;
+	left:0;
+	width:0;
+	box-shadow: 0 0 1px rgba(255, 255, 255, 0.4) inset;
+	-moz-transition:0.25s;
+	-webkit-transition:0.25s;
+	-o-transition:0.25s;
+	transition:0.25s;
+}
+
+#fileupload .preview.done .progress{
+	width:100% !important;
+}
+
+#fileupload .preview.notdone .progress{
+	width:100% !important;
+}
+
+#fileupload .progressfail{
+	background-color:#990000; /*#2586d0*/
+}
+
+/* upload */
+#pictures {
+	
+}
+
+.picturepublish {
+	position: relative;
+	margin: 0 auto;
+	width: 100px;
+	height: 100px;
+	line-height:1px;
+	border: 1px solid #ccc;
+	background: #fff;
+	display: table-cell;
+	vertical-align: middle;
+	overflow: hidden!important;
+}
+
+.picturepublish img {
+	max-height: 150px;
+	vertical-align: middle;
+}
+
+.picturepublish	.inpicturepublish {
+	width: 100%;
+	height: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.picturepublish .btnsup {
+	width: 16px;
+	height: 16px;
+	margin-left: 3px;
+	margin-top: 3px;
+	background-image: url('img/delete.png');
+	background-position: top left;
+	background-repeat: no-repeat;
+	text-decoration: none;
+	border: 0px none #000000;
+	background-color: transparent;
+	cursor: pointer;
+}
+
+.picturepublish	.inpicturepublishbig {
+	width: 100%;
+	height: 90px;
+	line-height: 90px;
+	position: absolute;
+	top: 5px;
+	left: 0;
+	text-align: center;
+}
